@@ -23,8 +23,7 @@
         if (findOS.indexOf("iphone") !== -1) {
             window.webkit.messageHandlers.callBackHandler.postMessage(postData);
         } else if (findOS.indexOf("android") !== -1) {
-            alert('android: ' + postData.toString())
-            AndroidBridge.postAddress(postData.toString());
+            AndroidBridge.postAddress(JSON.stringify(postData));
         }
     }
     var element_layer = document.getElementById('layer');
