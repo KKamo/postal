@@ -23,7 +23,8 @@
         if (findOS.indexOf("iphone") !== -1) {
             window.webkit.messageHandlers.callBackHandler.postMessage(postData);
         } else if (findOS.indexOf("android") !== -1) {
-            window.AndroidBridge.postAddress(postData);
+            alert('android: ' + postData.toString())
+            AndroidBridge.postAddress(postData.toString());
         }
     }
     var element_layer = document.getElementById('layer');
@@ -43,7 +44,6 @@
               zonecode : data.zonecode,
           };
           console.log('postData', postData)
-          alert(postData)
           window.postMessageToApp(postData);
         },
         width : '100%',
