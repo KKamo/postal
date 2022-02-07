@@ -40,9 +40,10 @@
           var postData = {
               roadAddress : data.roadAddress,
               jibunAddress : jibunAddress,
-              zonecode : data.zonecode
+              zonecode : data.zonecode,
           };
           console.log('postData', postData)
+          alert(postData)
           window.postMessageToApp(postData);
         },
         width : '100%',
